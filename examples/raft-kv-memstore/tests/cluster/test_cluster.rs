@@ -66,6 +66,7 @@ async fn test_cluster() -> anyhow::Result<()> {
         .with_env_filter(EnvFilter::from_default_env())
         .init();
 
+    // 三个 node 的地址
     let get_addr = |node_id| {
         let addr = match node_id {
             1 => "127.0.0.1:21001".to_string(),
